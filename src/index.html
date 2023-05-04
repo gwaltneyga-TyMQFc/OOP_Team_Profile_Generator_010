@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha512-T7zj+WkhrziGZ9kDRKZU2mohyZCEimZ4Q9jsncBZBz/N+Ay+2GOq1wYwqy0gezFbCO9sG23Y/gKItxIHXHj5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  </head>
+  <script src="index.js"></script>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-primary">
+        <span class="navbar-brand mb-0 h1">My Team</span>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">${manager.name}</h4>
+              <span class="badge badge-primary">Manager</span>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mb-3">
+                <li>Employee ID: ${manager.id}</li>
+                <li>Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+                <li>Office Number: ${manager.officeNumber}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        ${generateEngineerCards()}
+        ${generateInternCards()}
+      </div>
+    </main>
+    <footer class="bg-light py-3">
+      <div class="container">
+        <span class="text-muted">&copy; My Team 2023</span>
+      </div>
+    </footer>
+  </body>
+</html>
